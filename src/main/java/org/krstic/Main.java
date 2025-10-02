@@ -16,20 +16,19 @@ public class Main {
         Boolean isClockedIn = false;
         Scanner scan = new Scanner(System.in);
         LocalDateTime timeClockedIn = null;
-        LocalDateTime timeClockedOut = null;
+        LocalDateTime timeClockedOut;
+        int totalTimeElapsed = Integer.parseInt(
+                new String(Files.readAllBytes(Paths.get("src/main/resources/time.txt"))).trim());
 
 
         while(scan.nextLine() != "") {
             if (isClockedIn){
-
-
-
-                int totalTimeElapsed = Integer.parseInt(new String(Files.readAllBytes(Paths.get("src/main/resources/time.txt"))).trim());
                 timeClockedOut = LocalDateTime.now();
                 long timeElapsed = timeClockedIn.until(timeClockedOut, ChronoUnit.SECONDS);
                 totalTimeElapsed += timeElapsed;
                 String ttStr = String.valueOf(totalTimeElapsed);
                 Files.write(Paths.get("src/main/resources/time.txt"), ttStr.getBytes());
+
                 int seconds = (int) (timeElapsed % 60);
                 int minutes = (int) (timeElapsed / 60) % 60;
                 int hours = (int) (timeElapsed / 360);
@@ -37,10 +36,11 @@ public class Main {
                 int tseconds = (int) (totalTimeElapsed % 60);
                 int tminutes = (int) (totalTimeElapsed / 60) % 60;
                 int thours = (int) (totalTimeElapsed / 360);
-                System.out.println("Clocking out\n\nTime Elapsed: " + hours + " hours and " + minutes + " minutes and " + seconds + " seconds." + "Total time: " +
-                        thours + " hours " + tminutes + " minutes and " + tseconds + " seconds.\n\nEnter anything to clock back in." );
 
-
+                System.out.println("Clocking out\n\nTime Elapsed: " + hours + " hours and "
+                        + minutes + " minutes and " + seconds + " seconds." + "Total time: " +
+                        thours + " hours " + tminutes + " minutes and " + tseconds
+                        + " seconds.\n\nEnter anything to clock back in." );
 
                 isClockedIn = false;
             } else {

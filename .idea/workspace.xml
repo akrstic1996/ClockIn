@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc04fb8c-5e92-476b-8f02-4df77aad1b11" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/krstic/model/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/krstic/model/kTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/krstic/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/krstic/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/time.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,7 +67,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/krstic/Main.java</url>
-          <line>25</line>
+          <line>24</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
